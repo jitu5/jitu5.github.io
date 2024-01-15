@@ -1,0 +1,14 @@
+{
+  "type": "pandas.csv_dataset.CSVDataset",
+  "filepath": "/Users/Jitendra_Gundaniya/QB/kedro-viz/demo-project/data/04_feature/feature_importance_output.csv",
+  "plot": null,
+  "image": null,
+  "tracking_data": null,
+  "run_command": "kedro run --to-outputs=feature_importance_output",
+  "preview": null,
+  "stats": {
+    "rows": 15,
+    "columns": 2,
+    "file_size": 460
+  }
+}
