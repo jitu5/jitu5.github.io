@@ -1,63 +1,9 @@
 {
   "type": "pandas.csv_dataset.CSVDataset",
-  "filepath": "/Users/Jitendra_Gundaniya/QB/kedro-viz/demo-project/data/01_raw/companies.csv",
-  "plot": null,
-  "image": null,
-  "tracking_data": null,
+  "filepath": "/Users/Jitendra_Gundaniya/QB/kedro-viz-3/kedro-viz/demo-project/data/01_raw/companies.csv",
   "run_command": null,
-  "preview": {
-    "index": [
-      0,
-      1,
-      2,
-      3,
-      4
-    ],
-    "columns": [
-      "id",
-      "company_rating",
-      "company_location",
-      "total_fleet_count",
-      "iata_approved"
-    ],
-    "data": [
-      [
-        35029,
-        "100%",
-        "Niue",
-        4.0,
-        "f"
-      ],
-      [
-        30292,
-        "67%",
-        "Anguilla",
-        6.0,
-        "f"
-      ],
-      [
-        19032,
-        "67%",
-        "Russian Federation",
-        4.0,
-        "f"
-      ],
-      [
-        8238,
-        "91%",
-        "Barbados",
-        15.0,
-        "t"
-      ],
-      [
-        30342,
-        null,
-        "Sao Tome and Principe",
-        2.0,
-        "t"
-      ]
-    ]
-  },
+  "preview": null,
+  "preview_type": null,
   "stats": {
     "rows": 77096,
     "columns": 5,
