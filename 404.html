@@ -5,33 +5,47 @@
     <title>Single Page Apps for GitHub Pages</title>
     // In 404.html
     // In 404.html
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var pathSegmentsToKeep = 1;
       var l = window.location;
       
       // Only redirect if we haven't already been redirected (prevents loops)
-      if (!sessionStorage.getItem('redirect-lock')) {
-        // Save that we're redirecting to prevent loops
-        sessionStorage.setItem('redirect-lock', 'true');
+      if (!localStorage.getItem('redirect-lock')) {
+        // // Save that we're redirecting to prevent loops
+        localStorage.setItem('redirect-lock', 'true');
     
-        // Build base URL (e.g. https://jitu5.github.io)
-        var baseUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '');
+        // // Build base URL (e.g. https://jitu5.github.io)
+        // var baseUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '');
     
-        // Keep pathSegmentsToKeep number of segments for GitHub Pages
-        var repoPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+        // // Keep pathSegmentsToKeep number of segments for GitHub Pages
+        // var repoPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
     
-        // Convert remaining path to hash route
-        var hashRoute = '#' + l.pathname.split('/').slice(1 + pathSegmentsToKeep).join('/');
+        // // Convert remaining path to hash route
+        // var hashRoute = '#' + l.pathname.split('/').slice(1 + pathSegmentsToKeep).join('/');
         
-        // Redirect preserving any query params
-        l.replace(
-          baseUrl + repoPath + hashRoute + (l.search ? '?' + l.search.slice(1) : '')
-        );
+        // // Redirect preserving any query params
+        // l.replace(
+        //   baseUrl + repoPath + hashRoute + (l.search ? '?' + l.search.slice(1) : '')
+        // );
+
+        const newURL =
+        window.location.origin +
+        window.location.pathname +
+        window.location.search;
+
+      console.log('newURL..... ', newURL);  
+      window.location.replace(newURL);
       } else {
         // Clear the redirect lock so future legitimate redirects can happen
-        sessionStorage.removeItem('redirect-lock');
+        localStorage.removeItem('redirect-lock');
       }
-    </script>
+    </script> -->
+
+    <script>
+      const path = window.location.pathname.slice(1);
+      localStorage.setItem('path', path);
+      window.location.href='../';
+  </script>    
   </head>
   <body>
   </body>
