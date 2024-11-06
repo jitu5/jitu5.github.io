@@ -5,16 +5,16 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
-        "Reporting stage",
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "__default__",
+        "Data ingestion",
+        "Feature engineering",
+        "Reporting stage"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
         "feature_engineering",
+        "reporting",
         "ingestion"
       ],
       "layer": "primary",
@@ -30,10 +30,10 @@
       "name": "prm_spine_table",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Data ingestion",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__",
+        "Data ingestion"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -53,9 +53,9 @@
       "name": "create_derived_features",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -89,9 +89,9 @@
       "name": "params:feature_engineering.feature.derived",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -104,9 +104,9 @@
       "name": "feature_engineering.feat_derived_features",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -124,9 +124,9 @@
       "name": "create_feature_importance",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -139,15 +139,15 @@
       "name": "feature_importance_output",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
         "Reporting stage",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "feature",
       "dataset_type": "pandas.csv_dataset.CSVDataset",
@@ -162,9 +162,9 @@
       "name": "create_static_features",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -189,9 +189,9 @@
       "name": "params:feature_engineering.feature.static",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -204,9 +204,9 @@
       "name": "feature_engineering.feat_static_features",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -224,9 +224,9 @@
       "name": "joiner",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Feature engineering",
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -239,10 +239,10 @@
       "name": "model_input_table",
       "tags": [],
       "pipelines": [
-        "__default__",
-        "Modelling stage",
         "Pre-modelling",
-        "Feature engineering"
+        "Modelling stage",
+        "Feature engineering",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -272,60 +272,32 @@
   ],
   "edges": [
     {
-      "source": "f063cc82",
-      "target": "04ba733a"
-    },
-    {
-      "source": "f063cc82",
-      "target": "7932e672"
-    },
-    {
       "source": "9f266f06",
-      "target": "e50f81b8"
+      "target": "feature_engineering"
     },
     {
       "source": "feature_engineering",
-      "target": "23c94afb"
+      "target": "1e3cc50a"
     },
     {
-      "source": "04ba733a",
-      "target": "7c92a703"
-    },
-    {
-      "source": "9f266f06",
-      "target": "feature_engineering"
+      "source": "8e4f1015",
+      "target": "6ea2ec2c"
     },
     {
       "source": "a3627e31",
       "target": "e50f81b8"
     },
     {
+      "source": "f063cc82",
+      "target": "feature_engineering"
+    },
+    {
       "source": "9f266f06",
       "target": "04ba733a"
     },
     {
-      "source": "a3627e31",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "7932e672",
-      "target": "1e3cc50a"
-    },
-    {
       "source": "abed6a4d",
       "target": "feature_engineering"
-    },
-    {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "f063cc82",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "04ba733a"
     },
     {
       "source": "e50f81b8",
@@ -337,15 +309,43 @@
     },
     {
       "source": "feature_engineering",
+      "target": "23c94afb"
+    },
+    {
+      "source": "9f266f06",
+      "target": "e50f81b8"
+    },
+    {
+      "source": "7c92a703",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "f063cc82",
+      "target": "04ba733a"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "04ba733a"
+    },
+    {
+      "source": "04ba733a",
+      "target": "7c92a703"
+    },
+    {
+      "source": "f063cc82",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "7932e672",
       "target": "1e3cc50a"
     },
     {
       "source": "f063cc82",
-      "target": "feature_engineering"
+      "target": "7932e672"
     },
     {
-      "source": "8e4f1015",
-      "target": "6ea2ec2c"
+      "source": "a3627e31",
+      "target": "feature_engineering"
     }
   ],
   "layers": [
@@ -408,31 +408,31 @@
       "outputs": [],
       "children": [
         {
-          "id": "a3627e31",
-          "type": "parameters"
-        },
-        {
-          "id": "abed6a4d",
-          "type": "parameters"
-        },
-        {
-          "id": "23c94afb",
+          "id": "1e3cc50a",
           "type": "data"
-        },
-        {
-          "id": "feature_engineering",
-          "type": "modularPipeline"
         },
         {
           "id": "9f266f06",
           "type": "data"
         },
         {
-          "id": "1e3cc50a",
-          "type": "data"
+          "id": "abed6a4d",
+          "type": "parameters"
+        },
+        {
+          "id": "feature_engineering",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "a3627e31",
+          "type": "parameters"
         },
         {
           "id": "f063cc82",
+          "type": "data"
+        },
+        {
+          "id": "23c94afb",
           "type": "data"
         }
       ]
@@ -441,16 +441,28 @@
       "id": "feature_engineering",
       "name": "feature_engineering",
       "inputs": [
-        "a3627e31",
         "f063cc82",
+        "9f266f06",
         "abed6a4d",
-        "9f266f06"
+        "a3627e31"
       ],
       "outputs": [
         "23c94afb",
         "1e3cc50a"
       ],
       "children": [
+        {
+          "id": "6ea2ec2c",
+          "type": "task"
+        },
+        {
+          "id": "7932e672",
+          "type": "task"
+        },
+        {
+          "id": "e50f81b8",
+          "type": "task"
+        },
         {
           "id": "04ba733a",
           "type": "task"
@@ -462,18 +474,6 @@
         {
           "id": "7c92a703",
           "type": "data"
-        },
-        {
-          "id": "e50f81b8",
-          "type": "task"
-        },
-        {
-          "id": "7932e672",
-          "type": "task"
-        },
-        {
-          "id": "6ea2ec2c",
-          "type": "task"
         }
       ]
     }
