@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Single Page Apps for GitHub Pages</title>
-    // In 404.html
-    // In 404.html
+    // In 404.html // In 404.html
     <!-- <script type="text/javascript">
       var pathSegmentsToKeep = 1;
       var l = window.location;
@@ -42,11 +41,17 @@
     </script> -->
 
     <script>
-      const path = window.location.pathname.slice(1);
-      localStorage.setItem('path', path);
-      window.location.href='../';
-  </script>    
+      try {
+        const path = window.location.pathname.slice(1);
+        if (window.localStorage) {
+          localStorage.setItem('path', path);
+        }
+        window.location.href = '../';
+      } catch (e) {
+        console.error('Failed to handle redirect:', e);
+        window.location.href = '/'; // Fallback to root
+      }
+    </script>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
