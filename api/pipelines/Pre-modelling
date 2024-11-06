@@ -258,10 +258,10 @@
       "tags": [],
       "pipelines": [
         "Data ingestion",
-        "Feature engineering",
-        "Pre-modelling",
+        "__default__",
         "Reporting stage",
-        "__default__"
+        "Feature engineering",
+        "Pre-modelling"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -306,8 +306,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -342,8 +342,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -357,8 +357,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -377,8 +377,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -415,8 +415,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -442,8 +442,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -457,8 +457,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -512,8 +512,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -526,10 +526,10 @@
       "name": "model_input_table",
       "tags": [],
       "pipelines": [
-        "Feature engineering",
         "__default__",
+        "Pre-modelling",
         "Modelling stage",
-        "Pre-modelling"
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -575,31 +575,115 @@
   ],
   "edges": [
     {
-      "source": "c0ddbcbf",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "ingestion"
-    },
-    {
       "source": "feature_engineering",
       "target": "1e3cc50a"
-    },
-    {
-      "source": "aed46479",
-      "target": "ingestion"
     },
     {
       "source": "feature_engineering",
       "target": "23c94afb"
     },
     {
+      "source": "f063cc82",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "f063cc82"
+    },
+    {
+      "source": "ingestion",
+      "target": "9f266f06"
+    },
+    {
+      "source": "9f266f06",
+      "target": "e50f81b8"
+    },
+    {
+      "source": "ingestion",
+      "target": "c08c7708"
+    },
+    {
+      "source": "9f266f06",
+      "target": "feature_engineering"
+    },
+    {
       "source": "b5609df0",
+      "target": "ea604da4"
+    },
+    {
+      "source": "8e4f1015",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
+    },
+    {
+      "source": "8f20d98e",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "f23ad217",
+      "target": "8de402c1"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "ea604da4"
+    },
+    {
+      "source": "69c523b6",
+      "target": "f23ad217"
+    },
+    {
+      "source": "f063cc82",
+      "target": "9a6ef457"
+    },
+    {
+      "source": "04ba733a",
+      "target": "7c92a703"
+    },
+    {
+      "source": "8de402c1",
+      "target": "8f20d98e"
+    },
+    {
+      "source": "f063cc82",
+      "target": "7932e672"
+    },
+    {
+      "source": "6ea2ec2c",
+      "target": "23c94afb"
+    },
+    {
+      "source": "ingestion",
+      "target": "f063cc82"
+    },
+    {
+      "source": "b5609df0",
+      "target": "ingestion"
+    },
+    {
+      "source": "f33b9291",
+      "target": "c0ddbcbf"
+    },
+    {
+      "source": "a3627e31",
+      "target": "e50f81b8"
+    },
+    {
+      "source": "7c92a703",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "c0ddbcbf",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "a3627e31",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "aed46479",
       "target": "ingestion"
     },
     {
@@ -607,140 +691,56 @@
       "target": "f33b9291"
     },
     {
-      "source": "aed46479",
-      "target": "69c523b6"
-    },
-    {
-      "source": "f23ad217",
-      "target": "8de402c1"
-    },
-    {
-      "source": "f063cc82",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "cb5166f3",
-      "target": "9f266f06"
+      "source": "abed6a4d",
+      "target": "04ba733a"
     },
     {
       "source": "7b2c6e04",
       "target": "ingestion"
     },
     {
-      "source": "a3627e31",
-      "target": "e50f81b8"
+      "source": "4f7ffa1b",
+      "target": "cb5166f3"
     },
     {
-      "source": "ingestion",
-      "target": "9f266f06"
+      "source": "f1d596c2",
+      "target": "ingestion"
     },
     {
-      "source": "f063cc82",
-      "target": "7932e672"
+      "source": "aed46479",
+      "target": "69c523b6"
     },
     {
       "source": "e50f81b8",
       "target": "8e4f1015"
     },
     {
-      "source": "f063cc82",
-      "target": "9a6ef457"
-    },
-    {
-      "source": "b5609df0",
-      "target": "ea604da4"
-    },
-    {
-      "source": "04ba733a",
-      "target": "7c92a703"
-    },
-    {
-      "source": "8e4f1015",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "04ba733a"
-    },
-    {
-      "source": "7b2c6e04",
-      "target": "ea604da4"
-    },
-    {
-      "source": "cb5166f3",
-      "target": "f063cc82"
-    },
-    {
-      "source": "f063cc82",
-      "target": "04ba733a"
-    },
-    {
-      "source": "9f266f06",
-      "target": "e50f81b8"
-    },
-    {
-      "source": "a3627e31",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "69c523b6",
-      "target": "f23ad217"
-    },
-    {
-      "source": "ingestion",
+      "source": "9a6ef457",
       "target": "c08c7708"
     },
     {
-      "source": "ingestion",
-      "target": "f063cc82"
+      "source": "f063cc82",
+      "target": "04ba733a"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "9f266f06"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "feature_engineering"
     },
     {
       "source": "7932e672",
       "target": "1e3cc50a"
     },
     {
-      "source": "6ea2ec2c",
-      "target": "23c94afb"
-    },
-    {
-      "source": "8de402c1",
-      "target": "8f20d98e"
-    },
-    {
-      "source": "9f266f06",
-      "target": "04ba733a"
-    },
-    {
-      "source": "9a6ef457",
-      "target": "c08c7708"
-    },
-    {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
-    },
-    {
       "source": "f063cc82",
       "target": "feature_engineering"
     },
     {
-      "source": "4f7ffa1b",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "f33b9291",
-      "target": "c0ddbcbf"
-    },
-    {
       "source": "9f266f06",
-      "target": "feature_engineering"
+      "target": "04ba733a"
     }
   ],
   "layers": [
@@ -803,19 +803,11 @@
       "outputs": [],
       "children": [
         {
-          "id": "feature_engineering",
-          "type": "modularPipeline"
+          "id": "a3627e31",
+          "type": "parameters"
         },
         {
           "id": "1e3cc50a",
-          "type": "data"
-        },
-        {
-          "id": "ingestion",
-          "type": "modularPipeline"
-        },
-        {
-          "id": "9f266f06",
           "type": "data"
         },
         {
@@ -823,15 +815,7 @@
           "type": "data"
         },
         {
-          "id": "f063cc82",
-          "type": "data"
-        },
-        {
-          "id": "aed46479",
-          "type": "data"
-        },
-        {
-          "id": "abed6a4d",
+          "id": "b5609df0",
           "type": "parameters"
         },
         {
@@ -839,19 +823,35 @@
           "type": "data"
         },
         {
-          "id": "b5609df0",
+          "id": "ingestion",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "abed6a4d",
           "type": "parameters"
+        },
+        {
+          "id": "aed46479",
+          "type": "data"
+        },
+        {
+          "id": "7b2c6e04",
+          "type": "data"
+        },
+        {
+          "id": "f063cc82",
+          "type": "data"
         },
         {
           "id": "c08c7708",
           "type": "data"
         },
         {
-          "id": "a3627e31",
-          "type": "parameters"
+          "id": "feature_engineering",
+          "type": "modularPipeline"
         },
         {
-          "id": "7b2c6e04",
+          "id": "9f266f06",
           "type": "data"
         }
       ]
@@ -860,10 +860,10 @@
       "id": "feature_engineering",
       "name": "feature_engineering",
       "inputs": [
-        "f063cc82",
-        "abed6a4d",
         "a3627e31",
-        "9f266f06"
+        "f063cc82",
+        "9f266f06",
+        "abed6a4d"
       ],
       "outputs": [
         "23c94afb",
@@ -871,19 +871,7 @@
       ],
       "children": [
         {
-          "id": "7c92a703",
-          "type": "data"
-        },
-        {
-          "id": "04ba733a",
-          "type": "task"
-        },
-        {
           "id": "7932e672",
-          "type": "task"
-        },
-        {
-          "id": "e50f81b8",
           "type": "task"
         },
         {
@@ -893,6 +881,18 @@
         {
           "id": "6ea2ec2c",
           "type": "task"
+        },
+        {
+          "id": "7c92a703",
+          "type": "data"
+        },
+        {
+          "id": "04ba733a",
+          "type": "task"
+        },
+        {
+          "id": "e50f81b8",
+          "type": "task"
         }
       ]
     },
@@ -900,40 +900,20 @@
       "id": "ingestion",
       "name": "ingestion",
       "inputs": [
-        "b5609df0",
         "aed46479",
-        "7b2c6e04",
-        "f1d596c2"
+        "b5609df0",
+        "f1d596c2",
+        "7b2c6e04"
       ],
       "outputs": [
+        "c08c7708",
         "9f266f06",
-        "f063cc82",
-        "c08c7708"
+        "f063cc82"
       ],
       "children": [
         {
-          "id": "cb5166f3",
-          "type": "task"
-        },
-        {
-          "id": "f23ad217",
+          "id": "8f20d98e",
           "type": "data"
-        },
-        {
-          "id": "4f7ffa1b",
-          "type": "data"
-        },
-        {
-          "id": "69c523b6",
-          "type": "task"
-        },
-        {
-          "id": "8de402c1",
-          "type": "task"
-        },
-        {
-          "id": "f33b9291",
-          "type": "task"
         },
         {
           "id": "ea604da4",
@@ -944,12 +924,32 @@
           "type": "data"
         },
         {
-          "id": "8f20d98e",
-          "type": "data"
+          "id": "f33b9291",
+          "type": "task"
         },
         {
           "id": "9a6ef457",
           "type": "task"
+        },
+        {
+          "id": "69c523b6",
+          "type": "task"
+        },
+        {
+          "id": "cb5166f3",
+          "type": "task"
+        },
+        {
+          "id": "4f7ffa1b",
+          "type": "data"
+        },
+        {
+          "id": "8de402c1",
+          "type": "task"
+        },
+        {
+          "id": "f23ad217",
+          "type": "data"
         }
       ]
     }
