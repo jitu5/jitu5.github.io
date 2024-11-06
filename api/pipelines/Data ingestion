@@ -7,9 +7,9 @@
         "companies"
       ],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -24,9 +24,9 @@
         "companies"
       ],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -47,9 +47,9 @@
         "companies"
       ],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -68,9 +68,9 @@
       "name": "apply_types_to_reviews",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -87,9 +87,9 @@
       "name": "reviews",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -108,9 +108,9 @@
       "name": "params:ingestion.typing.reviews.columns_as_floats",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -123,9 +123,9 @@
       "name": "ingestion.int_typed_reviews",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -146,9 +146,9 @@
         "shuttles"
       ],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -163,9 +163,9 @@
         "shuttles"
       ],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -186,9 +186,9 @@
         "shuttles"
       ],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -207,9 +207,9 @@
       "name": "company_agg",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -222,9 +222,9 @@
       "name": "ingestion.prm_agg_companies",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -242,9 +242,9 @@
       "name": "combine_step",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -257,17 +257,17 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Reporting stage",
-        "Data ingestion",
+        "Feature engineering",
         "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Reporting stage",
+        "Data ingestion"
       ],
       "type": "data",
       "modular_pipelines": [
         "feature_engineering",
-        "reporting",
-        "ingestion"
+        "ingestion",
+        "reporting"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -282,10 +282,10 @@
       "name": "prm_spine_table",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
-        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Data ingestion",
+        "Feature engineering",
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -305,9 +305,9 @@
       "name": "<lambda>",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -320,9 +320,9 @@
       "name": "ingestion.prm_spine_table_clone",
       "tags": [],
       "pipelines": [
+        "Pre-modelling",
         "Data ingestion",
-        "__default__",
-        "Pre-modelling"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -354,20 +354,76 @@
   ],
   "edges": [
     {
-      "source": "f23ad217",
-      "target": "8de402c1"
+      "source": "8f20d98e",
+      "target": "cb5166f3"
     },
     {
-      "source": "b5609df0",
-      "target": "ea604da4"
+      "source": "4f7ffa1b",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "ingestion",
+      "target": "9f266f06"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "ingestion"
+    },
+    {
+      "source": "c0ddbcbf",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "f063cc82",
+      "target": "9a6ef457"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "f33b9291"
+    },
+    {
+      "source": "aed46479",
+      "target": "ingestion"
+    },
+    {
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
+    },
+    {
+      "source": "f33b9291",
+      "target": "c0ddbcbf"
     },
     {
       "source": "cb5166f3",
       "target": "9f266f06"
     },
     {
+      "source": "7b2c6e04",
+      "target": "ea604da4"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "ingestion"
+    },
+    {
       "source": "ingestion",
-      "target": "9f266f06"
+      "target": "c08c7708"
+    },
+    {
+      "source": "8de402c1",
+      "target": "8f20d98e"
+    },
+    {
+      "source": "aed46479",
+      "target": "69c523b6"
+    },
+    {
+      "source": "b5609df0",
+      "target": "ea604da4"
+    },
+    {
+      "source": "f23ad217",
+      "target": "8de402c1"
     },
     {
       "source": "69c523b6",
@@ -378,68 +434,12 @@
       "target": "ingestion"
     },
     {
-      "source": "9a6ef457",
-      "target": "c08c7708"
-    },
-    {
-      "source": "8de402c1",
-      "target": "8f20d98e"
-    },
-    {
-      "source": "f33b9291",
-      "target": "c0ddbcbf"
-    },
-    {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "ingestion"
-    },
-    {
-      "source": "ingestion",
-      "target": "c08c7708"
-    },
-    {
-      "source": "c0ddbcbf",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "4f7ffa1b",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "aed46479",
-      "target": "ingestion"
-    },
-    {
-      "source": "f063cc82",
-      "target": "9a6ef457"
-    },
-    {
-      "source": "7b2c6e04",
-      "target": "ea604da4"
-    },
-    {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
-    },
-    {
       "source": "cb5166f3",
       "target": "f063cc82"
     },
     {
-      "source": "f1d596c2",
-      "target": "f33b9291"
-    },
-    {
-      "source": "aed46479",
-      "target": "69c523b6"
-    },
-    {
-      "source": "7b2c6e04",
-      "target": "ingestion"
+      "source": "9a6ef457",
+      "target": "c08c7708"
     }
   ],
   "layers": [
@@ -502,11 +502,11 @@
       "outputs": [],
       "children": [
         {
-          "id": "aed46479",
+          "id": "c08c7708",
           "type": "data"
         },
         {
-          "id": "f1d596c2",
+          "id": "7b2c6e04",
           "type": "data"
         },
         {
@@ -514,7 +514,11 @@
           "type": "parameters"
         },
         {
-          "id": "7b2c6e04",
+          "id": "9f266f06",
+          "type": "data"
+        },
+        {
+          "id": "f1d596c2",
           "type": "data"
         },
         {
@@ -522,11 +526,7 @@
           "type": "modularPipeline"
         },
         {
-          "id": "9f266f06",
-          "type": "data"
-        },
-        {
-          "id": "c08c7708",
+          "id": "aed46479",
           "type": "data"
         }
       ]
@@ -535,10 +535,10 @@
       "id": "ingestion",
       "name": "ingestion",
       "inputs": [
-        "aed46479",
-        "7b2c6e04",
+        "f1d596c2",
         "b5609df0",
-        "f1d596c2"
+        "aed46479",
+        "7b2c6e04"
       ],
       "outputs": [
         "c08c7708",
@@ -546,7 +546,7 @@
       ],
       "children": [
         {
-          "id": "c0ddbcbf",
+          "id": "4f7ffa1b",
           "type": "data"
         },
         {
@@ -554,27 +554,11 @@
           "type": "data"
         },
         {
-          "id": "cb5166f3",
+          "id": "69c523b6",
           "type": "task"
-        },
-        {
-          "id": "4f7ffa1b",
-          "type": "data"
         },
         {
           "id": "f33b9291",
-          "type": "task"
-        },
-        {
-          "id": "ea604da4",
-          "type": "task"
-        },
-        {
-          "id": "f063cc82",
-          "type": "data"
-        },
-        {
-          "id": "9a6ef457",
           "type": "task"
         },
         {
@@ -582,11 +566,27 @@
           "type": "data"
         },
         {
-          "id": "8de402c1",
+          "id": "cb5166f3",
           "type": "task"
         },
         {
-          "id": "69c523b6",
+          "id": "c0ddbcbf",
+          "type": "data"
+        },
+        {
+          "id": "ea604da4",
+          "type": "task"
+        },
+        {
+          "id": "9a6ef457",
+          "type": "task"
+        },
+        {
+          "id": "f063cc82",
+          "type": "data"
+        },
+        {
+          "id": "8de402c1",
           "type": "task"
         }
       ]
