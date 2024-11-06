@@ -4,26 +4,32 @@
     <meta charset="utf-8">
     <title>Single Page Apps for GitHub Pages</title>
     // In 404.html
+    // In 404.html
     <script type="text/javascript">
       var pathSegmentsToKeep = 1;
       var l = window.location;
-    
-      // Store the URL we're trying to reach
-      var redirectUrl = sessionStorage.getItem('redirectUrl');
       
-      if (!redirectUrl) {
-        // First time - store the original URL and redirect to base
-        sessionStorage.setItem('redirectUrl', l.pathname + l.search + l.hash);
+      // Only redirect if we haven't already been redirected (prevents loops)
+      if (!sessionStorage.getItem('redirect-lock')) {
+        // Save that we're redirecting to prevent loops
+        sessionStorage.setItem('redirect-lock', 'true');
+    
+        // Build base URL (e.g. https://jitu5.github.io)
+        var baseUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '');
+    
+        // Keep pathSegmentsToKeep number of segments for GitHub Pages
+        var repoPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
+    
+        // Convert remaining path to hash route
+        var hashRoute = '#' + l.pathname.split('/').slice(1 + pathSegmentsToKeep).join('/');
         
-        // Redirect to base URL
+        // Redirect preserving any query params
         l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/')
+          baseUrl + repoPath + hashRoute + (l.search ? '?' + l.search.slice(1) : '')
         );
       } else {
-        // Second time - restore the URL
-        sessionStorage.removeItem('redirectUrl');
-        l.replace(redirectUrl);
+        // Clear the redirect lock so future legitimate redirects can happen
+        sessionStorage.removeItem('redirect-lock');
       }
     </script>
   </head>
