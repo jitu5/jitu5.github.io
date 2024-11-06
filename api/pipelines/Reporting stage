@@ -5,17 +5,17 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Data ingestion",
-        "Reporting stage",
+        "Feature engineering",
+        "__default__",
         "Pre-modelling",
-        "Feature engineering"
+        "Reporting stage"
       ],
       "type": "data",
       "modular_pipelines": [
         "feature_engineering",
-        "ingestion",
-        "reporting"
+        "reporting",
+        "ingestion"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -30,10 +30,10 @@
       "name": "feature_importance_output",
       "tags": [],
       "pipelines": [
+        "Feature engineering",
         "__default__",
         "Reporting stage",
-        "Pre-modelling",
-        "Feature engineering"
+        "Pre-modelling"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -249,10 +249,6 @@
   "edges": [
     {
       "source": "reporting",
-      "target": "eb7d6d28"
-    },
-    {
-      "source": "c7646ea1",
       "target": "d0e9b00f"
     },
     {
@@ -260,27 +256,7 @@
       "target": "reporting"
     },
     {
-      "source": "1e3cc50a",
-      "target": "4adb5c8b"
-    },
-    {
-      "source": "be6b7919",
-      "target": "3b199c6b"
-    },
-    {
-      "source": "40886786",
-      "target": "c6992660"
-    },
-    {
-      "source": "44ef9b48",
-      "target": "c0be8342"
-    },
-    {
-      "source": "9f266f06",
-      "target": "be6b7919"
-    },
-    {
-      "source": "3fb71518",
+      "source": "reporting",
       "target": "8838ca1f"
     },
     {
@@ -288,35 +264,27 @@
       "target": "40886786"
     },
     {
-      "source": "9f266f06",
-      "target": "44ef9b48"
-    },
-    {
-      "source": "9f266f06",
-      "target": "3fb71518"
-    },
-    {
       "source": "reporting",
       "target": "3b199c6b"
-    },
-    {
-      "source": "4adb5c8b",
-      "target": "eb7d6d28"
-    },
-    {
-      "source": "reporting",
-      "target": "8838ca1f"
     },
     {
       "source": "reporting",
       "target": "c0be8342"
     },
     {
-      "source": "reporting",
-      "target": "c6992660"
+      "source": "4adb5c8b",
+      "target": "eb7d6d28"
     },
     {
-      "source": "reporting",
+      "source": "9f266f06",
+      "target": "44ef9b48"
+    },
+    {
+      "source": "be6b7919",
+      "target": "3b199c6b"
+    },
+    {
+      "source": "c7646ea1",
       "target": "d0e9b00f"
     },
     {
@@ -325,15 +293,47 @@
     },
     {
       "source": "1e3cc50a",
+      "target": "4adb5c8b"
+    },
+    {
+      "source": "9f266f06",
+      "target": "be6b7919"
+    },
+    {
+      "source": "1e3cc50a",
       "target": "reporting"
+    },
+    {
+      "source": "40886786",
+      "target": "c6992660"
+    },
+    {
+      "source": "reporting",
+      "target": "eb7d6d28"
+    },
+    {
+      "source": "reporting",
+      "target": "c6992660"
+    },
+    {
+      "source": "3fb71518",
+      "target": "8838ca1f"
+    },
+    {
+      "source": "44ef9b48",
+      "target": "c0be8342"
+    },
+    {
+      "source": "9f266f06",
+      "target": "3fb71518"
     }
   ],
   "layers": [
-    "primary",
     "feature",
-    "raw",
+    "primary",
     "model_input",
     "intermediate",
+    "raw",
     "reporting"
   ],
   "tags": [
@@ -388,11 +388,7 @@
       "outputs": [],
       "children": [
         {
-          "id": "d0e9b00f",
-          "type": "data"
-        },
-        {
-          "id": "c6992660",
+          "id": "1e3cc50a",
           "type": "data"
         },
         {
@@ -400,7 +396,11 @@
           "type": "data"
         },
         {
-          "id": "9f266f06",
+          "id": "eb7d6d28",
+          "type": "data"
+        },
+        {
+          "id": "c6992660",
           "type": "data"
         },
         {
@@ -408,19 +408,19 @@
           "type": "data"
         },
         {
+          "id": "9f266f06",
+          "type": "data"
+        },
+        {
           "id": "reporting",
           "type": "modularPipeline"
         },
         {
-          "id": "1e3cc50a",
-          "type": "data"
-        },
-        {
-          "id": "eb7d6d28",
-          "type": "data"
-        },
-        {
           "id": "8838ca1f",
+          "type": "data"
+        },
+        {
+          "id": "d0e9b00f",
           "type": "data"
         }
       ]
@@ -433,24 +433,16 @@
         "1e3cc50a"
       ],
       "outputs": [
-        "c6992660",
-        "c0be8342",
-        "eb7d6d28",
-        "d0e9b00f",
         "3b199c6b",
-        "8838ca1f"
+        "d0e9b00f",
+        "eb7d6d28",
+        "c0be8342",
+        "8838ca1f",
+        "c6992660"
       ],
       "children": [
         {
           "id": "44ef9b48",
-          "type": "task"
-        },
-        {
-          "id": "c7646ea1",
-          "type": "task"
-        },
-        {
-          "id": "4adb5c8b",
           "type": "task"
         },
         {
@@ -463,6 +455,14 @@
         },
         {
           "id": "40886786",
+          "type": "task"
+        },
+        {
+          "id": "c7646ea1",
+          "type": "task"
+        },
+        {
+          "id": "4adb5c8b",
           "type": "task"
         }
       ]
