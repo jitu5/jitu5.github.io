@@ -43,8 +43,9 @@
     <script>
       try {
         const path = window.location.pathname.slice(1);
+        const search = window.location.search;
         if (window.localStorage) {
-          localStorage.setItem('path', path);
+          localStorage.setItem('gh-redirect-path', `${path}${search}`);
         }
         window.location.href = '../';
       } catch (e) {
