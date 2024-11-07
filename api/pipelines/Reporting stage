@@ -5,11 +5,11 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Feature engineering",
-        "Data ingestion",
-        "Pre-modelling",
         "Reporting stage",
-        "__default__"
+        "__default__",
+        "Feature engineering",
+        "Pre-modelling",
+        "Data ingestion"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -30,10 +30,10 @@
       "name": "feature_importance_output",
       "tags": [],
       "pipelines": [
+        "Feature engineering",
         "Pre-modelling",
         "Reporting stage",
-        "__default__",
-        "Feature engineering"
+        "__default__"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -248,12 +248,68 @@
   ],
   "edges": [
     {
+      "source": "be6b7919",
+      "target": "3b199c6b"
+    },
+    {
+      "source": "reporting",
+      "target": "d0e9b00f"
+    },
+    {
       "source": "9f266f06",
       "target": "be6b7919"
     },
     {
+      "source": "1e3cc50a",
+      "target": "reporting"
+    },
+    {
+      "source": "reporting",
+      "target": "c6992660"
+    },
+    {
+      "source": "1e3cc50a",
+      "target": "4adb5c8b"
+    },
+    {
+      "source": "c7646ea1",
+      "target": "d0e9b00f"
+    },
+    {
+      "source": "9f266f06",
+      "target": "reporting"
+    },
+    {
+      "source": "reporting",
+      "target": "8838ca1f"
+    },
+    {
+      "source": "9f266f06",
+      "target": "3fb71518"
+    },
+    {
+      "source": "reporting",
+      "target": "c0be8342"
+    },
+    {
+      "source": "reporting",
+      "target": "3b199c6b"
+    },
+    {
+      "source": "4adb5c8b",
+      "target": "eb7d6d28"
+    },
+    {
+      "source": "40886786",
+      "target": "c6992660"
+    },
+    {
       "source": "3fb71518",
       "target": "8838ca1f"
+    },
+    {
+      "source": "9f266f06",
+      "target": "40886786"
     },
     {
       "source": "44ef9b48",
@@ -264,64 +320,8 @@
       "target": "c7646ea1"
     },
     {
-      "source": "9f266f06",
-      "target": "reporting"
-    },
-    {
-      "source": "reporting",
-      "target": "c6992660"
-    },
-    {
-      "source": "9f266f06",
-      "target": "40886786"
-    },
-    {
-      "source": "reporting",
-      "target": "d0e9b00f"
-    },
-    {
-      "source": "reporting",
-      "target": "8838ca1f"
-    },
-    {
       "source": "reporting",
       "target": "eb7d6d28"
-    },
-    {
-      "source": "be6b7919",
-      "target": "3b199c6b"
-    },
-    {
-      "source": "40886786",
-      "target": "c6992660"
-    },
-    {
-      "source": "4adb5c8b",
-      "target": "eb7d6d28"
-    },
-    {
-      "source": "reporting",
-      "target": "c0be8342"
-    },
-    {
-      "source": "c7646ea1",
-      "target": "d0e9b00f"
-    },
-    {
-      "source": "9f266f06",
-      "target": "3fb71518"
-    },
-    {
-      "source": "1e3cc50a",
-      "target": "4adb5c8b"
-    },
-    {
-      "source": "reporting",
-      "target": "3b199c6b"
-    },
-    {
-      "source": "1e3cc50a",
-      "target": "reporting"
     },
     {
       "source": "9f266f06",
@@ -329,11 +329,11 @@
     }
   ],
   "layers": [
-    "feature",
     "primary",
-    "model_input",
-    "raw",
+    "feature",
     "intermediate",
+    "raw",
+    "model_input",
     "reporting"
   ],
   "tags": [
@@ -388,23 +388,15 @@
       "outputs": [],
       "children": [
         {
+          "id": "3b199c6b",
+          "type": "data"
+        },
+        {
           "id": "1e3cc50a",
           "type": "data"
         },
         {
-          "id": "d0e9b00f",
-          "type": "data"
-        },
-        {
-          "id": "reporting",
-          "type": "modularPipeline"
-        },
-        {
           "id": "eb7d6d28",
-          "type": "data"
-        },
-        {
-          "id": "c6992660",
           "type": "data"
         },
         {
@@ -412,15 +404,23 @@
           "type": "data"
         },
         {
+          "id": "d0e9b00f",
+          "type": "data"
+        },
+        {
           "id": "8838ca1f",
           "type": "data"
         },
         {
-          "id": "3b199c6b",
-          "type": "data"
+          "id": "reporting",
+          "type": "modularPipeline"
         },
         {
           "id": "9f266f06",
+          "type": "data"
+        },
+        {
+          "id": "c6992660",
           "type": "data"
         }
       ]
@@ -433,16 +433,16 @@
         "9f266f06"
       ],
       "outputs": [
-        "8838ca1f",
+        "eb7d6d28",
         "c0be8342",
         "d0e9b00f",
-        "3b199c6b",
+        "8838ca1f",
         "c6992660",
-        "eb7d6d28"
+        "3b199c6b"
       ],
       "children": [
         {
-          "id": "c7646ea1",
+          "id": "40886786",
           "type": "task"
         },
         {
@@ -454,15 +454,15 @@
           "type": "task"
         },
         {
-          "id": "44ef9b48",
-          "type": "task"
-        },
-        {
-          "id": "40886786",
+          "id": "c7646ea1",
           "type": "task"
         },
         {
           "id": "be6b7919",
+          "type": "task"
+        },
+        {
+          "id": "44ef9b48",
           "type": "task"
         }
       ]
