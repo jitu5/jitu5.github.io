@@ -258,16 +258,16 @@
       "tags": [],
       "pipelines": [
         "Reporting stage",
-        "Feature engineering",
-        "__default__",
         "Data ingestion",
+        "__default__",
+        "Feature engineering",
         "Pre-modelling"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
         "ingestion",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -283,8 +283,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Data ingestion",
         "Feature engineering",
+        "Data ingestion",
         "Pre-modelling"
       ],
       "type": "data",
@@ -392,14 +392,14 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Reporting stage",
         "Feature engineering",
+        "Reporting stage",
         "Pre-modelling"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "feature",
       "dataset_type": "pandas.csv_dataset.CSVDataset",
@@ -527,8 +527,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Modelling stage",
         "Feature engineering",
+        "Modelling stage",
         "Pre-modelling"
       ],
       "type": "data",
@@ -575,99 +575,47 @@
   ],
   "edges": [
     {
-      "source": "9f266f06",
-      "target": "feature_engineering"
+      "source": "f063cc82",
+      "target": "6ea2ec2c"
     },
     {
-      "source": "cb5166f3",
-      "target": "9f266f06"
+      "source": "f063cc82",
+      "target": "04ba733a"
     },
     {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "ingestion"
     },
     {
       "source": "7b2c6e04",
       "target": "ingestion"
     },
     {
-      "source": "feature_engineering",
-      "target": "23c94afb"
-    },
-    {
-      "source": "e50f81b8",
-      "target": "8e4f1015"
-    },
-    {
-      "source": "f063cc82",
-      "target": "04ba733a"
-    },
-    {
-      "source": "4f7ffa1b",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "f33b9291"
+      "source": "abed6a4d",
+      "target": "feature_engineering"
     },
     {
       "source": "9f266f06",
-      "target": "04ba733a"
-    },
-    {
-      "source": "b5609df0",
-      "target": "ea604da4"
-    },
-    {
-      "source": "f063cc82",
-      "target": "9a6ef457"
-    },
-    {
-      "source": "aed46479",
-      "target": "69c523b6"
-    },
-    {
-      "source": "ingestion",
-      "target": "f063cc82"
-    },
-    {
-      "source": "a3627e31",
       "target": "e50f81b8"
     },
     {
-      "source": "ingestion",
-      "target": "c08c7708"
-    },
-    {
-      "source": "a3627e31",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "ingestion"
-    },
-    {
-      "source": "7b2c6e04",
-      "target": "ea604da4"
-    },
-    {
-      "source": "c0ddbcbf",
-      "target": "cb5166f3"
+      "source": "6ea2ec2c",
+      "target": "23c94afb"
     },
     {
       "source": "8de402c1",
       "target": "8f20d98e"
     },
     {
-      "source": "7932e672",
-      "target": "1e3cc50a"
+      "source": "f33b9291",
+      "target": "c0ddbcbf"
     },
     {
-      "source": "f23ad217",
-      "target": "8de402c1"
-    },
-    {
-      "source": "abed6a4d",
+      "source": "9f266f06",
       "target": "feature_engineering"
     },
     {
@@ -675,68 +623,120 @@
       "target": "7c92a703"
     },
     {
-      "source": "8e4f1015",
-      "target": "6ea2ec2c"
+      "source": "c0ddbcbf",
+      "target": "cb5166f3"
     },
     {
-      "source": "cb5166f3",
-      "target": "f063cc82"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "04ba733a"
-    },
-    {
-      "source": "feature_engineering",
-      "target": "1e3cc50a"
-    },
-    {
-      "source": "ingestion",
-      "target": "9f266f06"
-    },
-    {
-      "source": "f33b9291",
-      "target": "c0ddbcbf"
-    },
-    {
-      "source": "aed46479",
-      "target": "ingestion"
-    },
-    {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "69c523b6",
-      "target": "f23ad217"
-    },
-    {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
+      "source": "b5609df0",
+      "target": "ea604da4"
     },
     {
       "source": "f063cc82",
       "target": "7932e672"
     },
     {
+      "source": "8e4f1015",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "aed46479",
+      "target": "ingestion"
+    },
+    {
+      "source": "4f7ffa1b",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "23c94afb"
+    },
+    {
+      "source": "f23ad217",
+      "target": "8de402c1"
+    },
+    {
+      "source": "7932e672",
+      "target": "1e3cc50a"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "1e3cc50a"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "04ba733a"
+    },
+    {
+      "source": "9f266f06",
+      "target": "04ba733a"
+    },
+    {
+      "source": "ingestion",
+      "target": "9f266f06"
+    },
+    {
+      "source": "a3627e31",
+      "target": "e50f81b8"
+    },
+    {
+      "source": "a3627e31",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "ingestion",
+      "target": "f063cc82"
+    },
+    {
       "source": "b5609df0",
       "target": "ingestion"
     },
     {
-      "source": "9f266f06",
-      "target": "e50f81b8"
+      "source": "ingestion",
+      "target": "c08c7708"
     },
     {
-      "source": "f063cc82",
-      "target": "6ea2ec2c"
+      "source": "e50f81b8",
+      "target": "8e4f1015"
     },
     {
-      "source": "6ea2ec2c",
-      "target": "23c94afb"
+      "source": "cb5166f3",
+      "target": "9f266f06"
     },
     {
       "source": "f063cc82",
       "target": "feature_engineering"
+    },
+    {
+      "source": "aed46479",
+      "target": "69c523b6"
+    },
+    {
+      "source": "69c523b6",
+      "target": "f23ad217"
+    },
+    {
+      "source": "f063cc82",
+      "target": "9a6ef457"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "f063cc82"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "ea604da4"
+    },
+    {
+      "source": "8f20d98e",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "7c92a703",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "f33b9291"
     },
     {
       "source": "9a6ef457",
@@ -748,8 +748,8 @@
     "reporting",
     "intermediate",
     "primary",
-    "feature",
-    "model_input"
+    "model_input",
+    "feature"
   ],
   "tags": [
     {
@@ -803,19 +803,11 @@
       "outputs": [],
       "children": [
         {
-          "id": "aed46479",
+          "id": "7b2c6e04",
           "type": "data"
         },
         {
-          "id": "b5609df0",
-          "type": "parameters"
-        },
-        {
-          "id": "a3627e31",
-          "type": "parameters"
-        },
-        {
-          "id": "f063cc82",
+          "id": "1e3cc50a",
           "type": "data"
         },
         {
@@ -823,23 +815,15 @@
           "type": "data"
         },
         {
-          "id": "feature_engineering",
-          "type": "modularPipeline"
-        },
-        {
-          "id": "9f266f06",
-          "type": "data"
-        },
-        {
-          "id": "7b2c6e04",
-          "type": "data"
-        },
-        {
           "id": "abed6a4d",
           "type": "parameters"
         },
         {
-          "id": "f1d596c2",
+          "id": "feature_engineering",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "aed46479",
           "type": "data"
         },
         {
@@ -847,12 +831,28 @@
           "type": "modularPipeline"
         },
         {
-          "id": "1e3cc50a",
+          "id": "c08c7708",
           "type": "data"
         },
         {
-          "id": "c08c7708",
+          "id": "a3627e31",
+          "type": "parameters"
+        },
+        {
+          "id": "f1d596c2",
           "type": "data"
+        },
+        {
+          "id": "f063cc82",
+          "type": "data"
+        },
+        {
+          "id": "9f266f06",
+          "type": "data"
+        },
+        {
+          "id": "b5609df0",
+          "type": "parameters"
         }
       ]
     },
@@ -866,12 +866,12 @@
         "abed6a4d"
       ],
       "outputs": [
-        "23c94afb",
-        "1e3cc50a"
+        "1e3cc50a",
+        "23c94afb"
       ],
       "children": [
         {
-          "id": "04ba733a",
+          "id": "6ea2ec2c",
           "type": "task"
         },
         {
@@ -879,7 +879,7 @@
           "type": "task"
         },
         {
-          "id": "8e4f1015",
+          "id": "7c92a703",
           "type": "data"
         },
         {
@@ -887,11 +887,11 @@
           "type": "task"
         },
         {
-          "id": "6ea2ec2c",
+          "id": "04ba733a",
           "type": "task"
         },
         {
-          "id": "7c92a703",
+          "id": "8e4f1015",
           "type": "data"
         }
       ]
@@ -900,10 +900,10 @@
       "id": "ingestion",
       "name": "ingestion",
       "inputs": [
-        "aed46479",
         "b5609df0",
         "7b2c6e04",
-        "f1d596c2"
+        "f1d596c2",
+        "aed46479"
       ],
       "outputs": [
         "9f266f06",
@@ -912,23 +912,15 @@
       ],
       "children": [
         {
-          "id": "8f20d98e",
-          "type": "data"
+          "id": "9a6ef457",
+          "type": "task"
         },
         {
           "id": "8de402c1",
           "type": "task"
         },
         {
-          "id": "69c523b6",
-          "type": "task"
-        },
-        {
-          "id": "f23ad217",
-          "type": "data"
-        },
-        {
-          "id": "4f7ffa1b",
+          "id": "c0ddbcbf",
           "type": "data"
         },
         {
@@ -936,7 +928,15 @@
           "type": "task"
         },
         {
-          "id": "c0ddbcbf",
+          "id": "4f7ffa1b",
+          "type": "data"
+        },
+        {
+          "id": "8f20d98e",
+          "type": "data"
+        },
+        {
+          "id": "f23ad217",
           "type": "data"
         },
         {
@@ -948,7 +948,7 @@
           "type": "task"
         },
         {
-          "id": "9a6ef457",
+          "id": "69c523b6",
           "type": "task"
         }
       ]

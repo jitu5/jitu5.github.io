@@ -258,16 +258,16 @@
       "tags": [],
       "pipelines": [
         "Reporting stage",
-        "Feature engineering",
-        "__default__",
         "Data ingestion",
+        "__default__",
+        "Feature engineering",
         "Pre-modelling"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
         "ingestion",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -283,8 +283,8 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Data ingestion",
         "Feature engineering",
+        "Data ingestion",
         "Pre-modelling"
       ],
       "type": "data",
@@ -354,15 +354,35 @@
   ],
   "edges": [
     {
-      "source": "cb5166f3",
-      "target": "9f266f06"
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
     },
     {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
+      "source": "f1d596c2",
+      "target": "ingestion"
     },
     {
       "source": "7b2c6e04",
+      "target": "ingestion"
+    },
+    {
+      "source": "8de402c1",
+      "target": "8f20d98e"
+    },
+    {
+      "source": "f33b9291",
+      "target": "c0ddbcbf"
+    },
+    {
+      "source": "c0ddbcbf",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "b5609df0",
+      "target": "ea604da4"
+    },
+    {
+      "source": "aed46479",
       "target": "ingestion"
     },
     {
@@ -370,72 +390,52 @@
       "target": "cb5166f3"
     },
     {
-      "source": "f1d596c2",
-      "target": "f33b9291"
-    },
-    {
-      "source": "b5609df0",
-      "target": "ea604da4"
-    },
-    {
-      "source": "f063cc82",
-      "target": "9a6ef457"
-    },
-    {
-      "source": "aed46479",
-      "target": "69c523b6"
-    },
-    {
-      "source": "ingestion",
-      "target": "c08c7708"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "ingestion"
-    },
-    {
-      "source": "7b2c6e04",
-      "target": "ea604da4"
-    },
-    {
-      "source": "c0ddbcbf",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "8de402c1",
-      "target": "8f20d98e"
-    },
-    {
       "source": "f23ad217",
       "target": "8de402c1"
-    },
-    {
-      "source": "cb5166f3",
-      "target": "f063cc82"
     },
     {
       "source": "ingestion",
       "target": "9f266f06"
     },
     {
-      "source": "f33b9291",
-      "target": "c0ddbcbf"
+      "source": "b5609df0",
+      "target": "ingestion"
+    },
+    {
+      "source": "ingestion",
+      "target": "c08c7708"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "9f266f06"
     },
     {
       "source": "aed46479",
-      "target": "ingestion"
+      "target": "69c523b6"
     },
     {
       "source": "69c523b6",
       "target": "f23ad217"
     },
     {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
+      "source": "f063cc82",
+      "target": "9a6ef457"
     },
     {
-      "source": "b5609df0",
-      "target": "ingestion"
+      "source": "cb5166f3",
+      "target": "f063cc82"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "ea604da4"
+    },
+    {
+      "source": "8f20d98e",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "f33b9291"
     },
     {
       "source": "9a6ef457",
@@ -445,8 +445,8 @@
   "layers": [
     "raw",
     "reporting",
-    "feature",
     "model_input",
+    "feature",
     "intermediate",
     "primary"
   ],
@@ -502,23 +502,11 @@
       "outputs": [],
       "children": [
         {
-          "id": "aed46479",
-          "type": "data"
-        },
-        {
-          "id": "b5609df0",
-          "type": "parameters"
-        },
-        {
-          "id": "9f266f06",
-          "type": "data"
-        },
-        {
           "id": "7b2c6e04",
           "type": "data"
         },
         {
-          "id": "f1d596c2",
+          "id": "aed46479",
           "type": "data"
         },
         {
@@ -528,6 +516,18 @@
         {
           "id": "c08c7708",
           "type": "data"
+        },
+        {
+          "id": "f1d596c2",
+          "type": "data"
+        },
+        {
+          "id": "9f266f06",
+          "type": "data"
+        },
+        {
+          "id": "b5609df0",
+          "type": "parameters"
         }
       ]
     },
@@ -535,10 +535,10 @@
       "id": "ingestion",
       "name": "ingestion",
       "inputs": [
-        "aed46479",
         "b5609df0",
         "7b2c6e04",
-        "f1d596c2"
+        "f1d596c2",
+        "aed46479"
       ],
       "outputs": [
         "9f266f06",
@@ -546,27 +546,15 @@
       ],
       "children": [
         {
-          "id": "8f20d98e",
-          "type": "data"
+          "id": "9a6ef457",
+          "type": "task"
         },
         {
           "id": "8de402c1",
           "type": "task"
         },
         {
-          "id": "69c523b6",
-          "type": "task"
-        },
-        {
-          "id": "f23ad217",
-          "type": "data"
-        },
-        {
-          "id": "f063cc82",
-          "type": "data"
-        },
-        {
-          "id": "4f7ffa1b",
+          "id": "c0ddbcbf",
           "type": "data"
         },
         {
@@ -574,7 +562,15 @@
           "type": "task"
         },
         {
-          "id": "c0ddbcbf",
+          "id": "4f7ffa1b",
+          "type": "data"
+        },
+        {
+          "id": "8f20d98e",
+          "type": "data"
+        },
+        {
+          "id": "f23ad217",
           "type": "data"
         },
         {
@@ -586,7 +582,11 @@
           "type": "task"
         },
         {
-          "id": "9a6ef457",
+          "id": "f063cc82",
+          "type": "data"
+        },
+        {
+          "id": "69c523b6",
           "type": "task"
         }
       ]
