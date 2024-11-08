@@ -5,17 +5,17 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
+        "Feature engineering",
+        "Pre-modelling",
         "__default__",
         "Data ingestion",
-        "Pre-modelling",
-        "Feature engineering",
         "Reporting stage"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
         "ingestion",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -30,8 +30,8 @@
       "name": "prm_spine_table",
       "tags": [],
       "pipelines": [
-        "__default__",
         "Data ingestion",
+        "__default__",
         "Feature engineering",
         "Pre-modelling"
       ],
@@ -140,14 +140,14 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Reporting stage",
         "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Reporting stage"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "feature",
       "dataset_type": "pandas.csv_dataset.CSVDataset",
@@ -240,9 +240,9 @@
       "tags": [],
       "pipelines": [
         "__default__",
-        "Modelling stage",
         "Feature engineering",
-        "Pre-modelling"
+        "Pre-modelling",
+        "Modelling stage"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -272,39 +272,71 @@
   ],
   "edges": [
     {
-      "source": "f063cc82",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "a3627e31",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "f063cc82",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "a3627e31",
-      "target": "e50f81b8"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "04ba733a"
-    },
-    {
-      "source": "04ba733a",
-      "target": "7c92a703"
+      "source": "e50f81b8",
+      "target": "8e4f1015"
     },
     {
       "source": "7932e672",
       "target": "1e3cc50a"
     },
     {
+      "source": "f063cc82",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "f063cc82",
+      "target": "04ba733a"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "04ba733a"
+    },
+    {
+      "source": "6ea2ec2c",
+      "target": "23c94afb"
+    },
+    {
+      "source": "04ba733a",
+      "target": "7c92a703"
+    },
+    {
       "source": "9f266f06",
       "target": "feature_engineering"
     },
     {
+      "source": "f063cc82",
+      "target": "7932e672"
+    },
+    {
+      "source": "9f266f06",
+      "target": "04ba733a"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "1e3cc50a"
+    },
+    {
+      "source": "a3627e31",
+      "target": "e50f81b8"
+    },
+    {
       "source": "8e4f1015",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "f063cc82",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "23c94afb"
+    },
+    {
+      "source": "7c92a703",
       "target": "6ea2ec2c"
     },
     {
@@ -312,49 +344,17 @@
       "target": "e50f81b8"
     },
     {
-      "source": "feature_engineering",
-      "target": "1e3cc50a"
-    },
-    {
-      "source": "f063cc82",
-      "target": "04ba733a"
-    },
-    {
-      "source": "f063cc82",
-      "target": "7932e672"
-    },
-    {
-      "source": "6ea2ec2c",
-      "target": "23c94afb"
-    },
-    {
-      "source": "feature_engineering",
-      "target": "23c94afb"
-    },
-    {
-      "source": "9f266f06",
-      "target": "04ba733a"
-    },
-    {
-      "source": "abed6a4d",
+      "source": "a3627e31",
       "target": "feature_engineering"
-    },
-    {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "e50f81b8",
-      "target": "8e4f1015"
     }
   ],
   "layers": [
     "primary",
-    "reporting",
     "raw",
+    "reporting",
     "intermediate",
-    "feature",
-    "model_input"
+    "model_input",
+    "feature"
   ],
   "tags": [
     {
@@ -408,11 +408,11 @@
       "outputs": [],
       "children": [
         {
-          "id": "9f266f06",
-          "type": "data"
+          "id": "abed6a4d",
+          "type": "parameters"
         },
         {
-          "id": "1e3cc50a",
+          "id": "f063cc82",
           "type": "data"
         },
         {
@@ -420,20 +420,20 @@
           "type": "modularPipeline"
         },
         {
-          "id": "abed6a4d",
-          "type": "parameters"
-        },
-        {
-          "id": "a3627e31",
-          "type": "parameters"
-        },
-        {
           "id": "23c94afb",
           "type": "data"
         },
         {
-          "id": "f063cc82",
+          "id": "1e3cc50a",
           "type": "data"
+        },
+        {
+          "id": "9f266f06",
+          "type": "data"
+        },
+        {
+          "id": "a3627e31",
+          "type": "parameters"
         }
       ]
     },
@@ -441,35 +441,35 @@
       "id": "feature_engineering",
       "name": "feature_engineering",
       "inputs": [
-        "abed6a4d",
+        "a3627e31",
         "f063cc82",
         "9f266f06",
-        "a3627e31"
+        "abed6a4d"
       ],
       "outputs": [
-        "23c94afb",
-        "1e3cc50a"
+        "1e3cc50a",
+        "23c94afb"
       ],
       "children": [
         {
-          "id": "04ba733a",
-          "type": "task"
-        },
-        {
           "id": "8e4f1015",
           "type": "data"
-        },
-        {
-          "id": "e50f81b8",
-          "type": "task"
         },
         {
           "id": "6ea2ec2c",
           "type": "task"
         },
         {
+          "id": "04ba733a",
+          "type": "task"
+        },
+        {
           "id": "7c92a703",
           "type": "data"
+        },
+        {
+          "id": "e50f81b8",
+          "type": "task"
         },
         {
           "id": "7932e672",
