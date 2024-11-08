@@ -257,17 +257,17 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Feature engineering",
-        "Pre-modelling",
-        "__default__",
         "Data ingestion",
-        "Reporting stage"
+        "Pre-modelling",
+        "Reporting stage",
+        "__default__",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
-        "ingestion",
         "feature_engineering",
-        "reporting"
+        "reporting",
+        "ingestion"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -289,8 +289,8 @@
       ],
       "type": "data",
       "modular_pipelines": [
-        "ingestion",
-        "feature_engineering"
+        "feature_engineering",
+        "ingestion"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -339,8 +339,8 @@
       "id": "ingestion",
       "name": "ingestion",
       "tags": [
-        "shuttles",
-        "companies"
+        "companies",
+        "shuttles"
       ],
       "pipelines": [
         "Data ingestion"
@@ -354,59 +354,55 @@
   ],
   "edges": [
     {
-      "source": "4f7ffa1b",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "69c523b6",
-      "target": "f23ad217"
-    },
-    {
-      "source": "b5609df0",
-      "target": "ingestion"
-    },
-    {
-      "source": "f23ad217",
-      "target": "8de402c1"
-    },
-    {
-      "source": "aed46479",
-      "target": "ingestion"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "ingestion"
-    },
-    {
-      "source": "cb5166f3",
-      "target": "f063cc82"
-    },
-    {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
-    },
-    {
       "source": "f33b9291",
       "target": "c0ddbcbf"
-    },
-    {
-      "source": "ingestion",
-      "target": "c08c7708"
-    },
-    {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "aed46479",
-      "target": "69c523b6"
     },
     {
       "source": "c0ddbcbf",
       "target": "cb5166f3"
     },
     {
+      "source": "9a6ef457",
+      "target": "c08c7708"
+    },
+    {
+      "source": "4f7ffa1b",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "f23ad217",
+      "target": "8de402c1"
+    },
+    {
+      "source": "69c523b6",
+      "target": "f23ad217"
+    },
+    {
       "source": "7b2c6e04",
+      "target": "ea604da4"
+    },
+    {
+      "source": "f063cc82",
+      "target": "9a6ef457"
+    },
+    {
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "9f266f06"
+    },
+    {
+      "source": "b5609df0",
+      "target": "ingestion"
+    },
+    {
+      "source": "aed46479",
+      "target": "69c523b6"
+    },
+    {
+      "source": "f1d596c2",
       "target": "ingestion"
     },
     {
@@ -418,35 +414,39 @@
       "target": "9f266f06"
     },
     {
-      "source": "b5609df0",
-      "target": "ea604da4"
+      "source": "aed46479",
+      "target": "ingestion"
+    },
+    {
+      "source": "7b2c6e04",
+      "target": "ingestion"
+    },
+    {
+      "source": "ingestion",
+      "target": "c08c7708"
+    },
+    {
+      "source": "8f20d98e",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "f063cc82"
     },
     {
       "source": "f1d596c2",
       "target": "f33b9291"
     },
     {
-      "source": "9a6ef457",
-      "target": "c08c7708"
-    },
-    {
-      "source": "f063cc82",
-      "target": "9a6ef457"
-    },
-    {
-      "source": "cb5166f3",
-      "target": "9f266f06"
-    },
-    {
-      "source": "7b2c6e04",
+      "source": "b5609df0",
       "target": "ea604da4"
     }
   ],
   "layers": [
     "raw",
-    "feature",
-    "reporting",
     "model_input",
+    "reporting",
+    "feature",
     "intermediate",
     "primary"
   ],
@@ -506,11 +506,11 @@
           "type": "data"
         },
         {
-          "id": "b5609df0",
-          "type": "parameters"
+          "id": "f1d596c2",
+          "type": "data"
         },
         {
-          "id": "c08c7708",
+          "id": "9f266f06",
           "type": "data"
         },
         {
@@ -518,15 +518,15 @@
           "type": "data"
         },
         {
+          "id": "b5609df0",
+          "type": "parameters"
+        },
+        {
           "id": "ingestion",
           "type": "modularPipeline"
         },
         {
-          "id": "9f266f06",
-          "type": "data"
-        },
-        {
-          "id": "f1d596c2",
+          "id": "c08c7708",
           "type": "data"
         }
       ]
@@ -536,9 +536,9 @@
       "name": "ingestion",
       "inputs": [
         "b5609df0",
-        "7b2c6e04",
+        "f1d596c2",
         "aed46479",
-        "f1d596c2"
+        "7b2c6e04"
       ],
       "outputs": [
         "9f266f06",
@@ -546,11 +546,39 @@
       ],
       "children": [
         {
+          "id": "9a6ef457",
+          "type": "task"
+        },
+        {
+          "id": "ea604da4",
+          "type": "task"
+        },
+        {
+          "id": "8f20d98e",
+          "type": "data"
+        },
+        {
+          "id": "4f7ffa1b",
+          "type": "data"
+        },
+        {
           "id": "cb5166f3",
           "type": "task"
         },
         {
+          "id": "f33b9291",
+          "type": "task"
+        },
+        {
+          "id": "69c523b6",
+          "type": "task"
+        },
+        {
           "id": "f063cc82",
+          "type": "data"
+        },
+        {
+          "id": "f23ad217",
           "type": "data"
         },
         {
@@ -559,34 +587,6 @@
         },
         {
           "id": "8de402c1",
-          "type": "task"
-        },
-        {
-          "id": "ea604da4",
-          "type": "task"
-        },
-        {
-          "id": "9a6ef457",
-          "type": "task"
-        },
-        {
-          "id": "f33b9291",
-          "type": "task"
-        },
-        {
-          "id": "f23ad217",
-          "type": "data"
-        },
-        {
-          "id": "4f7ffa1b",
-          "type": "data"
-        },
-        {
-          "id": "8f20d98e",
-          "type": "data"
-        },
-        {
-          "id": "69c523b6",
           "type": "task"
         }
       ]
