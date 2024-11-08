@@ -7,8 +7,8 @@
         "companies"
       ],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "task",
@@ -24,8 +24,8 @@
         "companies"
       ],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -47,8 +47,8 @@
         "companies"
       ],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -68,8 +68,8 @@
       "name": "apply_types_to_reviews",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "task",
@@ -87,8 +87,8 @@
       "name": "reviews",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -108,8 +108,8 @@
       "name": "params:ingestion.typing.reviews.columns_as_floats",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "parameters",
@@ -123,8 +123,8 @@
       "name": "ingestion.int_typed_reviews",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -146,8 +146,8 @@
         "shuttles"
       ],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "task",
@@ -163,8 +163,8 @@
         "shuttles"
       ],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -186,8 +186,8 @@
         "shuttles"
       ],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -207,8 +207,8 @@
       "name": "company_agg",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "task",
@@ -222,8 +222,8 @@
       "name": "ingestion.prm_agg_companies",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -242,8 +242,8 @@
       "name": "combine_step",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "task",
@@ -257,17 +257,17 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Reporting stage",
-        "Feature engineering",
         "Pre-modelling",
         "__default__",
-        "Data ingestion"
+        "Reporting stage",
+        "Data ingestion",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
+        "feature_engineering",
         "ingestion",
-        "feature_engineering"
+        "reporting"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -282,15 +282,15 @@
       "name": "prm_spine_table",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "Data ingestion",
+        "__default__",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
-        "ingestion",
-        "feature_engineering"
+        "feature_engineering",
+        "ingestion"
       ],
       "layer": "primary",
       "dataset_type": "pandas.parquet_dataset.ParquetDataset",
@@ -306,8 +306,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -342,8 +342,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -357,8 +357,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -377,8 +377,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -391,15 +391,15 @@
       "name": "feature_importance_output",
       "tags": [],
       "pipelines": [
-        "Reporting stage",
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "Reporting stage",
+        "__default__",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
-        "reporting",
-        "feature_engineering"
+        "feature_engineering",
+        "reporting"
       ],
       "layer": "feature",
       "dataset_type": "pandas.csv_dataset.CSVDataset",
@@ -415,8 +415,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -442,8 +442,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "parameters",
       "modular_pipelines": null,
@@ -457,8 +457,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -476,8 +476,8 @@
       "name": "<lambda>",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "task",
@@ -491,8 +491,8 @@
       "name": "ingestion.prm_spine_table_clone",
       "tags": [],
       "pipelines": [
-        "Data ingestion",
         "Pre-modelling",
+        "Data ingestion",
         "__default__"
       ],
       "type": "data",
@@ -512,8 +512,8 @@
       "tags": [],
       "pipelines": [
         "Pre-modelling",
-        "Feature engineering",
-        "__default__"
+        "__default__",
+        "Feature engineering"
       ],
       "type": "task",
       "modular_pipelines": [
@@ -526,10 +526,10 @@
       "name": "model_input_table",
       "tags": [],
       "pipelines": [
-        "Pre-modelling",
-        "Feature engineering",
         "Modelling stage",
-        "__default__"
+        "Pre-modelling",
+        "__default__",
+        "Feature engineering"
       ],
       "type": "data",
       "modular_pipelines": [
@@ -575,14 +575,6 @@
   ],
   "edges": [
     {
-      "source": "9a6ef457",
-      "target": "c08c7708"
-    },
-    {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
-    },
-    {
       "source": "7b2c6e04",
       "target": "ea604da4"
     },
@@ -591,31 +583,11 @@
       "target": "04ba733a"
     },
     {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
+      "source": "69c523b6",
+      "target": "f23ad217"
     },
     {
-      "source": "8de402c1",
-      "target": "8f20d98e"
-    },
-    {
-      "source": "f23ad217",
-      "target": "8de402c1"
-    },
-    {
-      "source": "f063cc82",
-      "target": "7932e672"
-    },
-    {
-      "source": "feature_engineering",
-      "target": "23c94afb"
-    },
-    {
-      "source": "b5609df0",
-      "target": "ingestion"
-    },
-    {
-      "source": "f063cc82",
+      "source": "8e4f1015",
       "target": "6ea2ec2c"
     },
     {
@@ -623,16 +595,8 @@
       "target": "feature_engineering"
     },
     {
-      "source": "9f266f06",
-      "target": "04ba733a"
-    },
-    {
-      "source": "ingestion",
-      "target": "9f266f06"
-    },
-    {
-      "source": "cb5166f3",
-      "target": "9f266f06"
+      "source": "f063cc82",
+      "target": "6ea2ec2c"
     },
     {
       "source": "7b2c6e04",
@@ -643,104 +607,140 @@
       "target": "7c92a703"
     },
     {
-      "source": "9f266f06",
-      "target": "e50f81b8"
-    },
-    {
-      "source": "e50f81b8",
-      "target": "8e4f1015"
-    },
-    {
-      "source": "f063cc82",
-      "target": "04ba733a"
-    },
-    {
-      "source": "8e4f1015",
-      "target": "6ea2ec2c"
-    },
-    {
-      "source": "9f266f06",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "aed46479",
-      "target": "ingestion"
-    },
-    {
-      "source": "4f7ffa1b",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "ingestion",
-      "target": "f063cc82"
-    },
-    {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
-    },
-    {
       "source": "cb5166f3",
-      "target": "f063cc82"
+      "target": "9f266f06"
     },
     {
-      "source": "69c523b6",
-      "target": "f23ad217"
-    },
-    {
-      "source": "6ea2ec2c",
-      "target": "23c94afb"
-    },
-    {
-      "source": "f063cc82",
-      "target": "feature_engineering"
+      "source": "8f20d98e",
+      "target": "cb5166f3"
     },
     {
       "source": "b5609df0",
       "target": "ea604da4"
     },
     {
-      "source": "aed46479",
-      "target": "69c523b6"
-    },
-    {
       "source": "f33b9291",
       "target": "c0ddbcbf"
     },
     {
-      "source": "7932e672",
-      "target": "1e3cc50a"
-    },
-    {
-      "source": "c0ddbcbf",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "ingestion"
-    },
-    {
-      "source": "a3627e31",
+      "source": "9f266f06",
       "target": "e50f81b8"
-    },
-    {
-      "source": "feature_engineering",
-      "target": "1e3cc50a"
     },
     {
       "source": "ingestion",
       "target": "c08c7708"
     },
     {
+      "source": "cb5166f3",
+      "target": "f063cc82"
+    },
+    {
+      "source": "b5609df0",
+      "target": "ingestion"
+    },
+    {
+      "source": "f063cc82",
+      "target": "7932e672"
+    },
+    {
+      "source": "7932e672",
+      "target": "1e3cc50a"
+    },
+    {
+      "source": "8de402c1",
+      "target": "8f20d98e"
+    },
+    {
+      "source": "9f266f06",
+      "target": "04ba733a"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "23c94afb"
+    },
+    {
+      "source": "6ea2ec2c",
+      "target": "23c94afb"
+    },
+    {
+      "source": "9f266f06",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "e50f81b8",
+      "target": "8e4f1015"
+    },
+    {
+      "source": "f23ad217",
+      "target": "8de402c1"
+    },
+    {
+      "source": "9a6ef457",
+      "target": "c08c7708"
+    },
+    {
+      "source": "4f7ffa1b",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "aed46479",
+      "target": "69c523b6"
+    },
+    {
+      "source": "f063cc82",
+      "target": "04ba733a"
+    },
+    {
+      "source": "f063cc82",
+      "target": "9a6ef457"
+    },
+    {
+      "source": "a3627e31",
+      "target": "e50f81b8"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "ingestion"
+    },
+    {
+      "source": "aed46479",
+      "target": "ingestion"
+    },
+    {
+      "source": "feature_engineering",
+      "target": "1e3cc50a"
+    },
+    {
+      "source": "f063cc82",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "ingestion",
+      "target": "9f266f06"
+    },
+    {
       "source": "f1d596c2",
       "target": "f33b9291"
+    },
+    {
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
     },
     {
       "source": "a3627e31",
       "target": "feature_engineering"
     },
     {
-      "source": "f063cc82",
-      "target": "9a6ef457"
+      "source": "7c92a703",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "ingestion",
+      "target": "f063cc82"
+    },
+    {
+      "source": "c0ddbcbf",
+      "target": "cb5166f3"
     }
   ],
   "layers": [
@@ -803,7 +803,11 @@
       "outputs": [],
       "children": [
         {
-          "id": "a3627e31",
+          "id": "7b2c6e04",
+          "type": "data"
+        },
+        {
+          "id": "abed6a4d",
           "type": "parameters"
         },
         {
@@ -815,11 +819,7 @@
           "type": "data"
         },
         {
-          "id": "aed46479",
-          "type": "data"
-        },
-        {
-          "id": "f1d596c2",
+          "id": "23c94afb",
           "type": "data"
         },
         {
@@ -827,19 +827,23 @@
           "type": "data"
         },
         {
-          "id": "23c94afb",
+          "id": "aed46479",
           "type": "data"
+        },
+        {
+          "id": "a3627e31",
+          "type": "parameters"
         },
         {
           "id": "ingestion",
           "type": "modularPipeline"
         },
         {
-          "id": "b5609df0",
-          "type": "parameters"
+          "id": "f1d596c2",
+          "type": "data"
         },
         {
-          "id": "abed6a4d",
+          "id": "b5609df0",
           "type": "parameters"
         },
         {
@@ -849,10 +853,6 @@
         {
           "id": "1e3cc50a",
           "type": "data"
-        },
-        {
-          "id": "7b2c6e04",
-          "type": "data"
         }
       ]
     },
@@ -860,14 +860,14 @@
       "id": "feature_engineering",
       "name": "feature_engineering",
       "inputs": [
-        "a3627e31",
         "f063cc82",
-        "9f266f06",
-        "abed6a4d"
+        "abed6a4d",
+        "a3627e31",
+        "9f266f06"
       ],
       "outputs": [
-        "23c94afb",
-        "1e3cc50a"
+        "1e3cc50a",
+        "23c94afb"
       ],
       "children": [
         {
@@ -883,12 +883,12 @@
           "type": "task"
         },
         {
-          "id": "e50f81b8",
-          "type": "task"
-        },
-        {
           "id": "7c92a703",
           "type": "data"
+        },
+        {
+          "id": "e50f81b8",
+          "type": "task"
         },
         {
           "id": "6ea2ec2c",
@@ -900,33 +900,17 @@
       "id": "ingestion",
       "name": "ingestion",
       "inputs": [
-        "f1d596c2",
+        "7b2c6e04",
         "b5609df0",
-        "aed46479",
-        "7b2c6e04"
+        "f1d596c2",
+        "aed46479"
       ],
       "outputs": [
-        "c08c7708",
         "f063cc82",
+        "c08c7708",
         "9f266f06"
       ],
       "children": [
-        {
-          "id": "9a6ef457",
-          "type": "task"
-        },
-        {
-          "id": "8f20d98e",
-          "type": "data"
-        },
-        {
-          "id": "69c523b6",
-          "type": "task"
-        },
-        {
-          "id": "ea604da4",
-          "type": "task"
-        },
         {
           "id": "f23ad217",
           "type": "data"
@@ -936,20 +920,36 @@
           "type": "task"
         },
         {
-          "id": "f33b9291",
+          "id": "8f20d98e",
+          "type": "data"
+        },
+        {
+          "id": "cb5166f3",
           "type": "task"
         },
         {
-          "id": "c0ddbcbf",
-          "type": "data"
+          "id": "ea604da4",
+          "type": "task"
+        },
+        {
+          "id": "69c523b6",
+          "type": "task"
+        },
+        {
+          "id": "9a6ef457",
+          "type": "task"
         },
         {
           "id": "4f7ffa1b",
           "type": "data"
         },
         {
-          "id": "cb5166f3",
+          "id": "f33b9291",
           "type": "task"
+        },
+        {
+          "id": "c0ddbcbf",
+          "type": "data"
         }
       ]
     }
