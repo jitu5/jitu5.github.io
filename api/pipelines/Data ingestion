@@ -257,16 +257,16 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Feature engineering",
-        "Data ingestion",
         "Reporting stage",
+        "Feature engineering",
         "Pre-modelling",
-        "__default__"
+        "__default__",
+        "Data ingestion"
       ],
       "type": "data",
       "modular_pipelines": [
-        "ingestion",
         "reporting",
+        "ingestion",
         "feature_engineering"
       ],
       "layer": "primary",
@@ -339,8 +339,8 @@
       "id": "ingestion",
       "name": "ingestion",
       "tags": [
-        "shuttles",
-        "companies"
+        "companies",
+        "shuttles"
       ],
       "pipelines": [
         "Data ingestion"
@@ -354,39 +354,39 @@
   ],
   "edges": [
     {
-      "source": "f063cc82",
-      "target": "9a6ef457"
+      "source": "9a6ef457",
+      "target": "c08c7708"
     },
     {
-      "source": "ingestion",
-      "target": "c08c7708"
+      "source": "ea604da4",
+      "target": "4f7ffa1b"
     },
     {
       "source": "7b2c6e04",
       "target": "ea604da4"
     },
     {
-      "source": "aed46479",
-      "target": "69c523b6"
+      "source": "8f20d98e",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "8de402c1",
+      "target": "8f20d98e"
+    },
+    {
+      "source": "b5609df0",
+      "target": "ingestion"
     },
     {
       "source": "f23ad217",
       "target": "8de402c1"
     },
     {
-      "source": "f1d596c2",
-      "target": "ingestion"
+      "source": "ingestion",
+      "target": "9f266f06"
     },
     {
       "source": "cb5166f3",
-      "target": "f063cc82"
-    },
-    {
-      "source": "f1d596c2",
-      "target": "f33b9291"
-    },
-    {
-      "source": "ingestion",
       "target": "9f266f06"
     },
     {
@@ -394,8 +394,16 @@
       "target": "ingestion"
     },
     {
-      "source": "9a6ef457",
-      "target": "c08c7708"
+      "source": "aed46479",
+      "target": "ingestion"
+    },
+    {
+      "source": "4f7ffa1b",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "cb5166f3",
+      "target": "f063cc82"
     },
     {
       "source": "69c523b6",
@@ -406,47 +414,39 @@
       "target": "ea604da4"
     },
     {
-      "source": "8de402c1",
-      "target": "8f20d98e"
-    },
-    {
-      "source": "c0ddbcbf",
-      "target": "cb5166f3"
-    },
-    {
-      "source": "8f20d98e",
-      "target": "cb5166f3"
-    },
-    {
       "source": "aed46479",
-      "target": "ingestion"
-    },
-    {
-      "source": "ea604da4",
-      "target": "4f7ffa1b"
-    },
-    {
-      "source": "4f7ffa1b",
-      "target": "cb5166f3"
+      "target": "69c523b6"
     },
     {
       "source": "f33b9291",
       "target": "c0ddbcbf"
     },
     {
-      "source": "b5609df0",
+      "source": "c0ddbcbf",
+      "target": "cb5166f3"
+    },
+    {
+      "source": "f1d596c2",
       "target": "ingestion"
     },
     {
-      "source": "cb5166f3",
-      "target": "9f266f06"
+      "source": "ingestion",
+      "target": "c08c7708"
+    },
+    {
+      "source": "f1d596c2",
+      "target": "f33b9291"
+    },
+    {
+      "source": "f063cc82",
+      "target": "9a6ef457"
     }
   ],
   "layers": [
     "raw",
-    "feature",
-    "reporting",
     "model_input",
+    "reporting",
+    "feature",
     "intermediate",
     "primary"
   ],
@@ -506,6 +506,14 @@
           "type": "data"
         },
         {
+          "id": "aed46479",
+          "type": "data"
+        },
+        {
+          "id": "f1d596c2",
+          "type": "data"
+        },
+        {
           "id": "9f266f06",
           "type": "data"
         },
@@ -514,16 +522,8 @@
           "type": "modularPipeline"
         },
         {
-          "id": "aed46479",
-          "type": "data"
-        },
-        {
           "id": "b5609df0",
           "type": "parameters"
-        },
-        {
-          "id": "f1d596c2",
-          "type": "data"
         },
         {
           "id": "7b2c6e04",
@@ -535,42 +535,18 @@
       "id": "ingestion",
       "name": "ingestion",
       "inputs": [
-        "7b2c6e04",
-        "b5609df0",
         "f1d596c2",
-        "aed46479"
+        "b5609df0",
+        "aed46479",
+        "7b2c6e04"
       ],
       "outputs": [
-        "9f266f06",
-        "c08c7708"
+        "c08c7708",
+        "9f266f06"
       ],
       "children": [
         {
-          "id": "c0ddbcbf",
-          "type": "data"
-        },
-        {
           "id": "9a6ef457",
-          "type": "task"
-        },
-        {
-          "id": "f23ad217",
-          "type": "data"
-        },
-        {
-          "id": "8f20d98e",
-          "type": "data"
-        },
-        {
-          "id": "cb5166f3",
-          "type": "task"
-        },
-        {
-          "id": "ea604da4",
-          "type": "task"
-        },
-        {
-          "id": "69c523b6",
           "type": "task"
         },
         {
@@ -578,7 +554,19 @@
           "type": "data"
         },
         {
-          "id": "4f7ffa1b",
+          "id": "8f20d98e",
+          "type": "data"
+        },
+        {
+          "id": "69c523b6",
+          "type": "task"
+        },
+        {
+          "id": "ea604da4",
+          "type": "task"
+        },
+        {
+          "id": "f23ad217",
           "type": "data"
         },
         {
@@ -587,6 +575,18 @@
         },
         {
           "id": "f33b9291",
+          "type": "task"
+        },
+        {
+          "id": "c0ddbcbf",
+          "type": "data"
+        },
+        {
+          "id": "4f7ffa1b",
+          "type": "data"
+        },
+        {
+          "id": "cb5166f3",
           "type": "task"
         }
       ]

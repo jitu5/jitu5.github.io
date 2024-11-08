@@ -5,16 +5,16 @@
       "name": "prm_shuttle_company_reviews",
       "tags": [],
       "pipelines": [
-        "Feature engineering",
-        "Data ingestion",
         "Reporting stage",
+        "Feature engineering",
         "Pre-modelling",
-        "__default__"
+        "__default__",
+        "Data ingestion"
       ],
       "type": "data",
       "modular_pipelines": [
-        "ingestion",
         "reporting",
+        "ingestion",
         "feature_engineering"
       ],
       "layer": "primary",
@@ -139,8 +139,8 @@
       "name": "feature_importance_output",
       "tags": [],
       "pipelines": [
-        "Pre-modelling",
         "Reporting stage",
+        "Pre-modelling",
         "Feature engineering",
         "__default__"
       ],
@@ -273,55 +273,31 @@
   "edges": [
     {
       "source": "abed6a4d",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "a3627e31",
-      "target": "e50f81b8"
-    },
-    {
-      "source": "8e4f1015",
-      "target": "6ea2ec2c"
+      "target": "04ba733a"
     },
     {
       "source": "f063cc82",
       "target": "7932e672"
     },
     {
-      "source": "6ea2ec2c",
-      "target": "23c94afb"
-    },
-    {
-      "source": "9f266f06",
-      "target": "feature_engineering"
-    },
-    {
-      "source": "04ba733a",
-      "target": "7c92a703"
-    },
-    {
-      "source": "f063cc82",
-      "target": "04ba733a"
-    },
-    {
-      "source": "abed6a4d",
-      "target": "04ba733a"
-    },
-    {
-      "source": "9f266f06",
-      "target": "04ba733a"
-    },
-    {
-      "source": "feature_engineering",
-      "target": "1e3cc50a"
-    },
-    {
       "source": "feature_engineering",
       "target": "23c94afb"
     },
     {
       "source": "f063cc82",
       "target": "6ea2ec2c"
+    },
+    {
+      "source": "abed6a4d",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "9f266f06",
+      "target": "04ba733a"
+    },
+    {
+      "source": "04ba733a",
+      "target": "7c92a703"
     },
     {
       "source": "9f266f06",
@@ -332,7 +308,27 @@
       "target": "8e4f1015"
     },
     {
-      "source": "a3627e31",
+      "source": "f063cc82",
+      "target": "04ba733a"
+    },
+    {
+      "source": "8e4f1015",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "9f266f06",
+      "target": "feature_engineering"
+    },
+    {
+      "source": "7c92a703",
+      "target": "6ea2ec2c"
+    },
+    {
+      "source": "6ea2ec2c",
+      "target": "23c94afb"
+    },
+    {
+      "source": "f063cc82",
       "target": "feature_engineering"
     },
     {
@@ -340,21 +336,25 @@
       "target": "1e3cc50a"
     },
     {
-      "source": "7c92a703",
-      "target": "6ea2ec2c"
+      "source": "a3627e31",
+      "target": "e50f81b8"
     },
     {
-      "source": "f063cc82",
+      "source": "feature_engineering",
+      "target": "1e3cc50a"
+    },
+    {
+      "source": "a3627e31",
       "target": "feature_engineering"
     }
   ],
   "layers": [
     "primary",
-    "intermediate",
     "raw",
     "reporting",
-    "feature",
-    "model_input"
+    "intermediate",
+    "model_input",
+    "feature"
   ],
   "tags": [
     {
@@ -408,23 +408,19 @@
       "outputs": [],
       "children": [
         {
-          "id": "9f266f06",
-          "type": "data"
-        },
-        {
           "id": "a3627e31",
           "type": "parameters"
-        },
-        {
-          "id": "feature_engineering",
-          "type": "modularPipeline"
         },
         {
           "id": "f063cc82",
           "type": "data"
         },
         {
-          "id": "1e3cc50a",
+          "id": "9f266f06",
+          "type": "data"
+        },
+        {
+          "id": "23c94afb",
           "type": "data"
         },
         {
@@ -432,7 +428,11 @@
           "type": "parameters"
         },
         {
-          "id": "23c94afb",
+          "id": "feature_engineering",
+          "type": "modularPipeline"
+        },
+        {
+          "id": "1e3cc50a",
           "type": "data"
         }
       ]
@@ -441,14 +441,14 @@
       "id": "feature_engineering",
       "name": "feature_engineering",
       "inputs": [
-        "f063cc82",
         "a3627e31",
+        "f063cc82",
         "9f266f06",
         "abed6a4d"
       ],
       "outputs": [
-        "1e3cc50a",
-        "23c94afb"
+        "23c94afb",
+        "1e3cc50a"
       ],
       "children": [
         {
@@ -456,7 +456,7 @@
           "type": "data"
         },
         {
-          "id": "6ea2ec2c",
+          "id": "7932e672",
           "type": "task"
         },
         {
@@ -468,12 +468,12 @@
           "type": "task"
         },
         {
-          "id": "7932e672",
-          "type": "task"
-        },
-        {
           "id": "7c92a703",
           "type": "data"
+        },
+        {
+          "id": "6ea2ec2c",
+          "type": "task"
         }
       ]
     }

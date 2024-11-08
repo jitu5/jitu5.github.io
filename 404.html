@@ -1,51 +1,16 @@
+<!-- Handle GitHub Pages redirect by storing the requested path and redirecting to the root -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Single Page Apps for GitHub Pages</title>
-    // In 404.html // In 404.html
-    <!-- <script type="text/javascript">
-      var pathSegmentsToKeep = 1;
-      var l = window.location;
-      
-      // Only redirect if we haven't already been redirected (prevents loops)
-      if (!localStorage.getItem('redirect-lock')) {
-        // // Save that we're redirecting to prevent loops
-        localStorage.setItem('redirect-lock', 'true');
-    
-        // // Build base URL (e.g. https://jitu5.github.io)
-        // var baseUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '');
-    
-        // // Keep pathSegmentsToKeep number of segments for GitHub Pages
-        // var repoPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/');
-    
-        // // Convert remaining path to hash route
-        // var hashRoute = '#' + l.pathname.split('/').slice(1 + pathSegmentsToKeep).join('/');
-        
-        // // Redirect preserving any query params
-        // l.replace(
-        //   baseUrl + repoPath + hashRoute + (l.search ? '?' + l.search.slice(1) : '')
-        // );
-
-        const newURL =
-        window.location.origin +
-        window.location.pathname +
-        window.location.search;
-
-      console.log('newURL..... ', newURL);  
-      window.location.replace(newURL);
-      } else {
-        // Clear the redirect lock so future legitimate redirects can happen
-        localStorage.removeItem('redirect-lock');
-      }
-    </script> -->
-
+    <title>Redirecting</title>
+    <p>Redirecting...</p>
     <script>
       try {
         const path = window.location.pathname.slice(1);
         const search = window.location.search;
         if (window.localStorage) {
-          localStorage.setItem('gh-redirect-path', `${path}${search}`);
+          localStorage.setItem('ghp-redirect-path', `${path}${search}`);
         }
         window.location.href = '../';
       } catch (e) {
